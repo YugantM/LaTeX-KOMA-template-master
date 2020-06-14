@@ -1,0 +1,27 @@
+\newenvironment{mykeithtabbing}[1]{%%
+\begin{tabular}{lp{0.9\hsize}}
+}{%%
+\end{tabular}
+}
+
+\newcommand{\mybadgood}[2]{%%
+\begin{mykeithtabbing}
+{}\emph{Bad:}  & \sout{#1}  \\
+\emph{Good:}   & #2  \\
+\end{mykeithtabbing}
+
+}
+
+\chapter{Fundamentals}
+\label{fundamentals}
+
+ Question Answer system can be divided in three sub-problems. Question Processing, Data Processing and Answer processing. 
+ 
+\section{Question Processing} 
+
+ Question Processing receives the input from the user, a question in natural language, to analyse and classify it. The analysis is to find out the type of question, meaning the focus of the question. This is necessary to avoid ambiguities in the answer (~\cite{CALIJORNESOARES2018}). Classification of the question type increases accuracy of the answer and helps to decide type of answer for the given question. The classification is one of the main steps of a QA system. There are two main approaches for question classification, manual and automatic (~\cite{RAY20101935}). Manual classification can be done by writing some rules to identify type of the question which is not recommended as it may fail if the data changes. This defines a goal for the system to be proposed. The approach should classify question type with good accuracy without requiring change in it when the context is changed. The next layer is all about deciding/finding relevant data from given dataset. However, in deep learning this classification can be achieved by SVM. SVM has maximum accuracy of ~90\% where as rule-based system has accuracy of 97.2\%.This means, to make a robust question classifier one need rule-based system. 
+
+
+\newpage
+For totally context independent question answer system, one need neural network based approach which can indirectly do this as a layer. Neural network requires large training dataset and lots of testing time. In this case, the training dataset is logs-data of software. It is comparatively easy to train a model for logs-data in compare to full descriptive and more complex text.
+
